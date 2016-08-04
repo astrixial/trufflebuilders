@@ -4,6 +4,10 @@
 // the  net is 56 [*]
 //  works within ballout
 
+//    run on terminal geth --networkid [*]
+/ Now I run truffle migrate --network Private[*].
+/ Migrations.sol.js shows that in Contract.all_networks["*"] 
+
 module.exports = {
   build: {
     "index.html": "index.html",
