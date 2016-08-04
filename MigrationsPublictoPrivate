@@ -1,0 +1,41 @@
+
+/// A migration on truffle 2.0 
+// If you are working on private chain and you want to migrate you work this is the js file 
+// the  net is 56 [*]
+//  works within ballout
+
+module.exports = {
+  build: {
+    "index.html": "index.html",
+    "app.js": [
+        "../node_modules/jquery/dist/jquery.min.js",
+        "../node_modules/materialize-css/dist/js/materialize.min.js",
+        "../node_modules/underscore/underscore-min.js",
+        "javascripts/util.js",
+        "javascripts/ballotReader.js",
+        "javascripts/ballot.js",
+        "javascripts/html.js",
+        "javascripts/app.js"
+    ],
+    "app.css": [
+        "../node_modules/materialize-css/dist/css/materialize.min.css",
+        "stylesheets/app.scss"
+    ],
+    "images/": "images/",
+    "fonts/" : "../node_modules/materialize-css/dist/font/"
+  },
+  deploy: [
+    "Ballot",
+    "MetaCoin",
+    "ConvertLib"
+
+networks: {
+  "net56": {
+    network_id: 56
+  },
+  "Private3": {
+    network_id: 67585
+  }
+}
+
+
